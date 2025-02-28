@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Spreadsheet App - Functionalities
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple web spreadsheet built with [React](https://reactjs.org/), mimicking Google Sheets basics.
 
-## Available Scripts
+## Functionalities
 
-In the project directory, you can run:
+- **Grid Layout**:
+  - 10x10 cells (rows 1-10, columns A-J).
+  - Click any cell to select and edit.
 
-### `npm start`
+- **Data Input**:
+  - Type numbers (e.g., `2` in `A1`, `3` in `B1`) or text directly into cells.
+  - Values save to your browser and reload on refresh.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **Formula Bar**:
+  - Shows the selected cell’s value or formula (e.g., `=SUM(A1:B1)`).
+  - Edit here or in the cell; press Enter or click away to save.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Mathematical Functions**:
+  - `=SUM(A1:B1)`: Sums a horizontal (e.g., `A1` to `B1`) or vertical (e.g., `A1:A3`) range.
+    - Example: `2` in `A1`, `3` in `B1`, `=SUM(A1:B1)` in `C1` → `5`.
+  - `=AVERAGE(A1:B1)`: Averages values in a range.
+  - `=MAX(A1:B1)`: Finds the highest value in a range.
+  - `=MIN(A1:B1)`: Finds the lowest value in a range.
+  - `=COUNT(A1:B1)`: Counts numeric values in a range.
 
-### `npm test`
+- **Basic Formulas**:
+  - Supports simple math (e.g., `=A1+B1` or `=A1*2`).
+  - Updates when referenced cells change.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Navigation**:
+  - Press Enter to move to the cell below (e.g., `A1` to `A2`).
 
-### `npm run build`
+## How to Run
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Install**:
+   - Clone the repo and run:
+     ```bash
+     npm install
+     npm install mathjs
+     ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. **Start**:
+   - Launch with:
+     ```bash
+     npm start
+     ```
+   - Open `http://localhost:3000`.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Tech Used
 
-### `npm run eject`
+- **[React](https://reactjs.org/)**: For the interactive UI.
+- **TypeScript**: For type safety.
+- **mathjs**: Powers formula calculations.
+- **Local Storage**: Saves your data.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Notes
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Only horizontal (e.g., `A1:B1`) or vertical (e.g., `A1:A3`) ranges work for functions.
+- Errors show as "ERROR" in cells.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+---
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+This focuses on what your app does, links to React for context, and includes just enough setup info. Save it as `README.md`. If you want to add deployment steps (e.g., Vercel) or tweak the tone, let me know!
