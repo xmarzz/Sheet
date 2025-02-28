@@ -2,6 +2,10 @@
 
 A simple web spreadsheet built with [React](https://reactjs.org/), mimicking Google Sheets basics.
 
+
+## Live Deployed in Web
+Try it here: https://sheet-bsbxauref-sathickjaffer44gmailcoms-projects.vercel.app/
+
 ## Functionalities
 
 - **Grid Layout**:
